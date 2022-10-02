@@ -4,7 +4,7 @@ type TimeAction =
   | { type: "START_TIMER"; payload: number }
   | { type: "CHANGE_STATE"; payload: boolean }
   | { type: "CHANGE_EVENT"; payload: { name: string; value: string } }
-  | { type: "UPDATE_TIMER"; payload: number };
+  | { type: "UPDATE_EVENT"; payload: number };
 
 export const TimerReducer = (state: IGlobalState, action: TimeAction) => {
   switch (action.type) {
@@ -26,7 +26,7 @@ export const TimerReducer = (state: IGlobalState, action: TimeAction) => {
         [action.payload.name]: action.payload.value,
       };
 
-    case "UPDATE_TIMER":
+    case "UPDATE_EVENT":
       return {
         ...state,
         globalTime: action.payload,

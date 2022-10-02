@@ -18,7 +18,7 @@ export const TimerProvider = ({ children }: props) => {
   const [globalState, dispatch] = useReducer(TimerReducer, INITIAL_STATE);
 
   useEffect(() => {
-    dispatch({ type: "UPDATE_TIMER", payload: globalState.session * 60 });
+    dispatch({ type: "UPDATE_EVENT", payload: globalState.session * 60 });
   }, [globalState.session]);
 
   const handleStart = (): void => {
