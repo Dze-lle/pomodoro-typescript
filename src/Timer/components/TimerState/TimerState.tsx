@@ -2,14 +2,14 @@ import React from "react";
 import { useTimer } from "../../hooks/useTimer";
 
 const TimerState = () => {
-  const { globalState, handleState } = useTimer();
+  const { globalState, handleState, handleReset } = useTimer();
   return (
     <div>
       <button onClick={() => handleState()}>
         {globalState.changeState ? `pause` : `play`}
       </button>
 
-      <button>reset</button>
+      <button onClick={() => handleReset()}>reset</button>
     </div>
   );
 };

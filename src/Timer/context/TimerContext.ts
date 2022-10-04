@@ -6,6 +6,7 @@ export type TimeContextProps = {
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
   handleState: () => void;
   handleStart: () => void;
+  handleReset: () => void;
 };
 
 export const TimerContext = createContext<TimeContextProps>(

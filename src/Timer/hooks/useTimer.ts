@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { TimerContext } from "../context/TimerContext";
 
 export const useTimer = () => {
-  const { globalState, handleChange, handleState, handleStart } =
+  const { globalState, handleChange, handleState, handleStart, handleReset } =
     useContext(TimerContext);
 
   return {
@@ -10,5 +10,6 @@ export const useTimer = () => {
     handleChange,
     handleState,
     handleStart,
+    handleReset,
   };
 };

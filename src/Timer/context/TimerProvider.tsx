@@ -16,16 +16,24 @@ type props = {
 
 export const TimerProvider = ({ children }: props) => {
   const [globalState, dispatch] = useReducer(TimerReducer, INITIAL_STATE);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     dispatch({ type: "UPDATE_EVENT", payload: globalState.session * 60 });
   }, [globalState.session]);
 
+  useEffect(() => {
+    if (count > 1) {
+      dispatch({ type: "RESERT_TIMER" });
+    }
+  }, [count]);
+
   const handleStart = (): void => {
     dispatch({ type: "START_TIMER", payload: globalState.globalTime - 1 });
 
-    if (globalState.globalTime < 0) {
-      return;
+    if (globalState.globalTime <= 0) {
+      setCount((prev) => prev + 1);
+      dispatch({ type: "START_TIMER", payload: globalState.break * 60 - 1 });
     }
   };
 
@@ -38,9 +46,19 @@ export const TimerProvider = ({ children }: props) => {
     dispatch({ type: "CHANGE_EVENT", payload: { name, value } });
   };
 
+  const handleReset = () => {
+    dispatch({ type: "RESERT_TIMER" });
+  };
+
   return (
     <TimerContext.Provider
-      value={{ globalState, handleState, handleChange, handleStart }}
+      value={{
+        globalState,
+        handleState,
+        handleChange,
+        handleStart,
+        handleReset,
+      }}
     >
       {children}
     </TimerContext.Provider>
