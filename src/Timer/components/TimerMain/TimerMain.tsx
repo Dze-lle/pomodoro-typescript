@@ -1,5 +1,6 @@
-import { FC, useEffect, useState } from "react";
+import { FC, useEffect } from "react";
 import { useTimer } from "../../hooks/useTimer";
+import "./TimerMain.css";
 
 const TimerMain: FC = () => {
   const { globalState, handleStart } = useTimer();
@@ -24,8 +25,9 @@ const TimerMain: FC = () => {
   };
 
   return (
-    <div>
-      <h2>{handleConvertTime(globalState.globalTime)}</h2>
+    <div className="clock">
+      <h1>Pomodoro</h1>
+      <span>{handleConvertTime(globalState.globalTime)}</span>
     </div>
   );
 };

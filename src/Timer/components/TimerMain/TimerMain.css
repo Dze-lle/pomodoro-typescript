@@ -1,0 +1,17 @@
+.clock {
+  width: 20em;
+  height: 20em;
+  border-radius: 50%;
+  justify-self: center;
+  box-shadow: var(--innerShadow);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0.85em 0;
+}
+
+.clock span {
+  font-weight: bold;
+  font-size: 12.5vmin;
+}

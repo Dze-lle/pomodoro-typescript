@@ -4,7 +4,7 @@ import TimerState from "./components/TimerState/TimerState";
 
 const Timer = () => {
   return (
-    <section>
+    <section className="container">
       <TimerControl />
       <TimerMain />
       <TimerState />

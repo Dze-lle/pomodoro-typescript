@@ -1,15 +1,17 @@
-import React from "react";
 import { useTimer } from "../../hooks/useTimer";
+import "./TimerState.css";
 
 const TimerState = () => {
   const { globalState, handleState, handleReset } = useTimer();
   return (
     <div>
-      <button onClick={() => handleState()}>
+      <button className="btn" onClick={() => handleState()}>
         {globalState.changeState ? `pause` : `play`}
       </button>
 
-      <button onClick={() => handleReset()}>reset</button>
+      <button className="btn" onClick={() => handleReset()}>
+        reset
+      </button>
     </div>
   );
 };
