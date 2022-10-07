@@ -1,21 +1,23 @@
 .btn {
-  width: 15rem;
-  height: 4rem;
+  width: 20vmin;
+  height: 5vmin;
   border-radius: 1rem;
-  background: var(--darkGrey);
+  background: var(--linearGradient);
   box-shadow: var(--outerShadow);
   cursor: pointer;
   transition: 0.3s ease-in-out;
   font-size: 2vmin;
-  margin: 0 0.4em 0;
+  margin: 0.1em 0.4em 0.1em;
   font-weight: 700;
   text-transform: uppercase;
+  color: var(--lightGrey);
 }
 
 .btn:hover {
-  color: #79828e;
+  color: var(--primaryColor);
 }
 
 .btn:active {
+  background: var(--darkGrey);
   box-shadow: var(--innerShadow);
 }

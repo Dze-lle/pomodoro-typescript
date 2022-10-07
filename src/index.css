@@ -3,14 +3,19 @@
 :root {
   /* backgroundColor */
   --darkGrey: #38485c;
+  --lightGrey: #79828e;
   --darkGreyShadow: #303e4f;
   --lightGreyShadow: #405269;
+
+  /* textColor */
+  --primaryColor: #0c0c36;
 
   /* shadows */
   --outerShadow: 5px 5px 9px var(--darkGreyShadow),
     -5px -5px 9px var(--lightGreyShadow);
   --innerShadow: inset 0.2rem 0.2rem 0.5rem var(--darkGreyShadow),
     inset -0.2rem -0.2rem 0.5rem var(--lightGreyShadow);
+  --linearGradient: linear-gradient(145deg, #232d3b, #3a4b60);
 }
 
 html {

@@ -25,6 +25,7 @@ export const TimerProvider = ({ children }: props) => {
   useEffect(() => {
     if (count > 1) {
       dispatch({ type: "RESERT_TIMER" });
+      setCount(0);
     }
   }, [count]);
 
@@ -42,7 +43,7 @@ export const TimerProvider = ({ children }: props) => {
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    const { name, value } = e.target;
+    const { name, value, type, min, max } = e.target;
     dispatch({ type: "CHANGE_EVENT", payload: { name, value } });
   };
 

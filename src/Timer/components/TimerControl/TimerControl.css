@@ -1,0 +1,65 @@
+.container-control {
+  display: flex;
+}
+
+.container-control .container-input {
+  margin: 0 3em 0;
+}
+
+.container-control .container-input p {
+  font-size: 2.75vmin;
+  font-weight: 700;
+  color: var(--primaryColor);
+  text-align: center;
+}
+
+.container-control .container-input .input-group {
+  display: flex;
+  align-items: center;
+  margin: 1em 0;
+}
+
+input,
+output {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 1em;
+}
+
+output {
+  background: var(--linearGradient);
+  border-radius: 0.2em;
+  box-shadow: var(--outerShadow);
+  width: 1.5em;
+  height: 1.5em;
+  color: var(--lightGrey);
+  font-size: 3.25vmin;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input[type="range"] {
+  appearance: none;
+  margin-right: 1em;
+  width: 25vmin;
+  height: 1.5em;
+  border-radius: 1em;
+  background: var(--darkGrey);
+  box-shadow: var(--innerShadow);
+}
+
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  height: 1.75em;
+  width: 1.75em;
+  transition: background 0.3s ease-in-out;
+  border-radius: 50%;
+  border: 9px solid #cdccc9;
+  box-shadow: inset 8px 8px 16px #b4b4b1, inset -8px -8px 16px #e6e4e1;
+}
+
+input[type="range" i]:disabled {
+  opacity: 0.3;
+}
