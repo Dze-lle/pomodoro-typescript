@@ -7,7 +7,7 @@ const TimerControl = () => {
 
   return (
     <>
-      <p>Session Length : {globalState.session}</p>
+      <p>Sessions Length : {globalState.session}</p>
       <input
         type="range"
         value={globalState.session}
