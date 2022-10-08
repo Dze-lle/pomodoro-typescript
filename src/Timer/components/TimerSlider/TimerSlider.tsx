@@ -1,7 +1,7 @@
 import { useTimer } from "../../hooks/useTimer";
-import "./TimerControl.css";
+import "./TimerSlider.css";
 
-const TimerControl = () => {
+const TimerSlider = () => {
   const { globalState, handleChange } = useTimer();
 
   return (
@@ -17,6 +17,11 @@ const TimerControl = () => {
             name="session"
             onChange={(e) => handleChange(e)}
             disabled={globalState.changeState ? true : false}
+            style={{
+              backgroundSize: `${Math.round(
+                (globalState.session / 60) * 100
+              )}% 100%`,
+            }}
           />
           <output>{globalState.session}</output>
         </div>
@@ -33,6 +38,11 @@ const TimerControl = () => {
             name="break"
             onChange={(e) => handleChange(e)}
             disabled={globalState.changeState ? true : false}
+            style={{
+              backgroundSize: `${Math.round(
+                (globalState.break / 30) * 100
+              )}% 100%`,
+            }}
           />
           <output>{globalState.break}</output>
         </div>
@@ -41,4 +51,4 @@ const TimerControl = () => {
   );
 };
 
-export default TimerControl;
+export default TimerSlider;

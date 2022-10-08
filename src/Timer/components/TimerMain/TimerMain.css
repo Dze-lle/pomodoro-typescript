@@ -12,13 +12,13 @@
   color: var(--primaryColor);
 }
 
-.clock h1 {
-  padding: 0.1em 0.5em;
-  border-radius: 0.2em 1em;
-  box-shadow: var(--outerShadow);
-}
-
 .clock span {
   font-weight: bold;
   font-size: 12.5vmin;
+}
+
+:is(.clock h1, .clock strong) {
+  padding: 0.1em 0.5em;
+  border-radius: 0.2em;
+  box-shadow: var(--outerShadow);
 }

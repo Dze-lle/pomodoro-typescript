@@ -1,12 +1,12 @@
 import { useTimer } from "../../hooks/useTimer";
-import "./TimerState.css";
+import "./TimerButton.css";
 
 const TimerState = () => {
   const { globalState, handleState, handleReset } = useTimer();
   return (
     <div>
       <button className="btn" onClick={() => handleState()}>
-        {globalState.changeState ? `pause` : `play`}
+        {globalState.changeState ? `pause` : `start`}
       </button>
 
       <button className="btn" onClick={() => handleReset()}>

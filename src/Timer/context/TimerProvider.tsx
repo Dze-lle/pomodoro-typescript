@@ -59,6 +59,7 @@ export const TimerProvider = ({ children }: props) => {
         handleChange,
         handleStart,
         handleReset,
+        count,
       }}
     >
       {children}

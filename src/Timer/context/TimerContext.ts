@@ -7,6 +7,7 @@ export type TimeContextProps = {
   handleState: () => void;
   handleStart: () => void;
   handleReset: () => void;
+  count: number;
 };
 
 export const TimerContext = createContext<TimeContextProps>(

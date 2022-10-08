@@ -3,7 +3,7 @@ import { useTimer } from "../../hooks/useTimer";
 import "./TimerMain.css";
 
 const TimerMain: FC = () => {
-  const { globalState, handleStart } = useTimer();
+  const { globalState, handleStart, count } = useTimer();
 
   useEffect(() => {
     if (globalState.changeState) {
@@ -28,6 +28,7 @@ const TimerMain: FC = () => {
     <div className="clock">
       <h1>Pomodoro</h1>
       <span>{handleConvertTime(globalState.globalTime)}</span>
+      <strong>{count === 0 ? "session" : "break"}</strong>
     </div>
   );
 };
