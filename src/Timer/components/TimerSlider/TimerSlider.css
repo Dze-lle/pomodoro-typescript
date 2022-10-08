@@ -44,7 +44,7 @@ input[type="range"] {
   appearance: none;
   margin-right: 1em;
   width: 25vmin;
-  height: 1.5em;
+  height: 0.75em;
   border-radius: 1em;
   box-shadow: var(--innerShadow);
   background: var(--light);
