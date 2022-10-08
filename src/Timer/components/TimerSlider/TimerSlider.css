@@ -9,7 +9,7 @@
 .container-control .container-input p {
   font-size: 2.75vmin;
   font-weight: 700;
-  color: var(--primaryColor);
+  color: var(--dark);
   text-align: center;
 }
 
@@ -27,12 +27,12 @@ output {
 }
 
 output {
-  background: var(--linearGradient);
+  background: var(--dark);
   border-radius: 0.2em;
   box-shadow: var(--outerShadow);
   width: 1.5em;
   height: 1.5em;
-  color: var(--lightGrey);
+  color: var(--light);
   font-size: 3.25vmin;
   font-weight: bold;
   display: flex;
@@ -47,9 +47,9 @@ input[type="range"] {
   height: 1.5em;
   border-radius: 1em;
   box-shadow: var(--innerShadow);
-  background: var(--darkGrey);
+  background: var(--light);
   position: relative;
-  background-image: linear-gradient(145deg, #0c0c36, #0c0c36);
+  background: linear-gradient(145deg, #0d0d3a, #0b0b31);
   background-repeat: no-repeat;
 }
 
@@ -59,8 +59,8 @@ input[type="range"]::-webkit-slider-thumb {
   width: 1.75em;
   transition: background 0.3s ease-in-out;
   border-radius: 50%;
-  border: 9px solid #cdccc9;
-  box-shadow: inset 8px 8px 16px #b4b4b1, inset -8px -8px 16px #e6e4e1;
+  border: 9px solid var(--dark);
+  box-shadow: var(--innerShadow);
 }
 
 input[type="range" i]:disabled {

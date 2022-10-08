@@ -2,7 +2,7 @@
   width: 20vmin;
   height: 5vmin;
   border-radius: 1rem;
-  background: var(--linearGradient);
+  background: var(--light);
   box-shadow: var(--outerShadow);
   cursor: pointer;
   transition: 0.3s ease-in-out;
@@ -14,10 +14,10 @@
 }
 
 .btn:hover {
-  color: var(--primaryColor);
+  color: var(--dark);
 }
 
 .btn:active {
-  background: var(--darkGrey);
+  background: var(--light);
   box-shadow: var(--innerShadow);
 }

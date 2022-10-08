@@ -9,7 +9,7 @@
   align-items: center;
   flex-direction: column;
   margin: 0.85em 0;
-  color: var(--primaryColor);
+  color: var(--dark);
 }
 
 .clock span {
