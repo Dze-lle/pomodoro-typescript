@@ -54,13 +54,30 @@ input[type="range"] {
 }
 
 input[type="range"]::-webkit-slider-thumb {
-  appearance: none;
+  -webkit-appearance: none;
   height: 1.75em;
   width: 1.75em;
   transition: background 0.3s ease-in-out;
   border-radius: 50%;
-  border: 9px solid var(--dark);
-  box-shadow: var(--innerShadow);
+  border: 1em solid var(--dark);
+}
+
+input[type="range"]::-moz-range-thumb {
+  -webkit-appearance: none;
+  height: 1.75em;
+  width: 1.75em;
+  transition: background 0.3s ease-in-out;
+  border-radius: 50%;
+  border: 1em solid var(--dark);
+}
+
+input[type="range"]::-ms-thumb {
+  -webkit-appearance: none;
+  height: 1.75em;
+  width: 1.75em;
+  transition: background 0.3s ease-in-out;
+  border-radius: 50%;
+  border: 1em solid var(--dark);
 }
 
 input[type="range" i]:disabled {
