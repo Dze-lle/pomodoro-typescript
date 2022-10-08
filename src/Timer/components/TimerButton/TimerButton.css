@@ -11,6 +11,7 @@
   font-weight: 700;
   text-transform: uppercase;
   color: var(--lightGrey);
+  font-family: inherit;
 }
 
 .btn:hover {
