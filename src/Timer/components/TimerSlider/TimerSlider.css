@@ -64,6 +64,6 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range" i]:disabled {
-  opacity: 0.1;
+  opacity: 0.2;
   background: none;
 }
