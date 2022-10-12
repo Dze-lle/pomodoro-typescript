@@ -43,7 +43,7 @@ export const TimerProvider = ({ children }: props) => {
   };
 
   const handleChange = (e: ChangeEvent<HTMLInputElement>): void => {
-    const { name, value, type, min, max } = e.target;
+    const { name, value } = e.target;
     dispatch({ type: "CHANGE_EVENT", payload: { name, value } });
   };
 

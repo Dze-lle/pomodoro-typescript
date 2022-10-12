@@ -59,8 +59,8 @@ input[type="range"]::-webkit-slider-thumb {
   width: 1.75em;
   transition: background 0.3s ease-in-out;
   border-radius: 50%;
-  background: var(--light);
-  box-shadow: var(--outerShadow);
+  background: #121250;
+  box-shadow: 1px 1px 2px #11114b, -1px -1px 2px #131355;
   border: none;
 }
 
