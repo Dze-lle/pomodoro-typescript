@@ -3,6 +3,7 @@ import "./TimerButton.css";
 
 const TimerState = () => {
   const { globalState, handleState, handleReset } = useTimer();
+
   return (
     <div>
       <button className="btn" onClick={() => handleState()}>
