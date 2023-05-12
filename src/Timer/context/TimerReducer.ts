@@ -5,7 +5,7 @@ type TimeAction =
   | { type: "CHANGE_STATE"; payload: boolean }
   | { type: "CHANGE_EVENT"; payload: { name: string; value: string } }
   | { type: "UPDATE_EVENT"; payload: number }
-  | { type: "RESERT_TIMER" };
+  | { type: "RESET_TIMER" };
 
 export const TimerReducer = (state: IGlobalState, action: TimeAction) => {
   switch (action.type) {
@@ -33,7 +33,7 @@ export const TimerReducer = (state: IGlobalState, action: TimeAction) => {
         globalTime: action.payload,
       };
 
-    case "RESERT_TIMER":
+    case "RESET_TIMER":
       return {
         session: 25,
         break: 5,

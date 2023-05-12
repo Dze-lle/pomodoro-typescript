@@ -24,7 +24,7 @@ export const TimerProvider = ({ children }: props) => {
 
   useEffect(() => {
     if (count > 1) {
-      dispatch({ type: "RESERT_TIMER" });
+      dispatch({ type: "RESET_TIMER" });
       setCount(0);
     }
   }, [count]);
@@ -48,7 +48,7 @@ export const TimerProvider = ({ children }: props) => {
   };
 
   const handleReset = () => {
-    dispatch({ type: "RESERT_TIMER" });
+    dispatch({ type: "RESET_TIMER" });
   };
 
   return (
