@@ -1,8 +1,8 @@
-import { ChangeEvent, createContext } from "react";
-import { IGlobalState } from "../interfaces";
+import { ChangeEvent, createContext } from 'react';
+import { GlobalState } from '../interfaces';
 
 export type TimeContextProps = {
-  globalState: IGlobalState;
+  globalState: GlobalState;
   handleChange: (e: ChangeEvent<HTMLInputElement>) => void;
   handleState: () => void;
   handleStart: () => void;
